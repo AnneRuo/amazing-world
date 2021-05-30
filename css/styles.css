@@ -1,0 +1,30 @@
+#galleria {
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 300px;
+}
+
+#galleria img {
+    height: 120px;
+    box-shadow: 8px 8px 8px grey;
+    margin: 5px;
+}
+
+.eventimg {
+    width:100%;
+    max-width:500px;
+}
+
+.trafficimg {
+    width:100%;
+    max-width:800px;
+}
+
+.flickerimg {
+    height: 200px;
+    float: left;
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 0 0 5px #ccc;
+    border: 10px solid #fff;
+}

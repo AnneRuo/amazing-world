@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Amazing World</title>
+    <meta name="description" content="MahtavatMestat">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- GRT Youtube Plugin CSS -->
+    <link rel="stylesheet" href="css/grt-responsive-menu.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/grt-responsive-menu.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="js/lightbox.min.js"></script>
+
+    <script>
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'positionFromTop': 60,
+        })
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <div class="menu-container">
+            <div class="row no-margin">
+                <div class="col-sm-4 col-xs-6 no-padding">
+                    <a href="#" class="grt-logo"><img src="images/logo.png"></a>
+                </div>
+                <div class="col-sm-8 col-xs-6 no-padding">
+                    <nav>
+                        <button class="grt-mobile-button">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>
+                        </button>
+                        <ul class="grt-menu">
+							<li><a href="index.html">Home</a></li>
+							<li class="active"><a href="gallery.html">Gallery</a></li>
+							<li class="grt-dropdown"><a>Tampere</a>
+								<ul class="grt-dropdown-list">
+									<li><a href="trip.html">Trip</a></li>
+									<li><a href="events.html">Events</a></li>
+									<li><a href="weather.html">Weather</a></li>
+								</ul>
+							<li><a href="traffic.html">Traffic</a></li>
+							<li><a href="pictures.html">Pictures</a></li>
+						</ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid" style="margin-top:60px;" id="galleria">
+
+        <a href="images/kuva1.jpg" data-lightbox="seatrip" data-title="Palm beach"><img src="images/thumb1.jpg"></a>
+        <a href="images/kuva2.jpg" data-lightbox="seatrip" data-title="Yacht beach"><img src="images/thumb2.jpg"></a>
+        <a href="images/kuva3.jpg" data-lightbox="seatrip" data-title="Scuba diving beach"><img src="images/thumb3.jpg"></a>
+        <a href="images/kuva4.jpg" data-lightbox="seatrip" data-title="Pirate beach"><img src="images/thumb4.jpg"></a>
+
+    </div>
+
+</body>
+
+</html>

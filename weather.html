@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Amazing World</title>
+    <meta name="description" content="MahtavatMestat">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- GRT Youtube Plugin CSS -->
+    <link rel="stylesheet" href="css/grt-responsive-menu.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/grt-responsive-menu.js"></script>
+
+    <script type='text/javascript' src='config.js'></script>
+
+    <script>
+        var mykey = config.MY_KEY;
+        $.getJSON("http://api.openweathermap.org/data/2.5/weather?lang=fi&q=tampere&units=metric&APPID=" + mykey, function (data) {
+            var items = [];
+            items.push("<p><li>City: " + data.name + "</li></p>");
+            items.push("<p><li>Weather: " + data.weather[0].description + "</li></p>");
+            items.push("<p><li>Temperature: " + data.main.temp + " &degC</li></p>");
+            items.push("<p><li>Wind speed: " + data.wind.speed + " m/s</li></p>");
+
+            var kuva = 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png';
+            items.push("<img src=" + kuva + " >");
+
+            $("#weather").append(items.join(""));
+        })
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <div class="menu-container">
+            <div class="row no-margin">
+                <div class="col-sm-4 col-xs-6 no-padding">
+                    <a href="#" class="grt-logo"><img src="images/logo.png"></a>
+                </div>
+                <div class="col-sm-8 col-xs-6 no-padding">
+                    <nav>
+                        <button class="grt-mobile-button">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>
+                        </button>
+                        <ul class="grt-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li class="grt-dropdown"><a>Tampere</a>
+                                <ul class="grt-dropdown-list">
+                                    <li><a href="trip.html">Trip</a></li>
+                                    <li><a href="events.html">Events</a></li>
+                                    <li class="active"><a href="weather.html">Weather</a></li>
+                                </ul>
+                            <li><a href="traffic.html">Traffic</a></li>
+                            <li><a href="pictures.html">Pictures</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid" style="margin-top:60px;" id="weather">
+
+
+    </div>
+
+</body>
+
+</html>
